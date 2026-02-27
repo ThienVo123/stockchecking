@@ -1,0 +1,43 @@
+---
+name: vietnam-stock-assistant
+description: "Collect and summarize real-time stock prices, financial indicators, and news from the Vietnam stock market, primarily using VietStock. Use for: market overviews, specific ticker analysis, and financial reporting."
+---
+
+# Vietnam Stock Market Assistant
+
+This skill enables Manus to efficiently gather and summarize information about the Vietnam stock market, with a focus on VietStock as the primary data source.
+
+## Core Workflows
+
+### 1. Market Overview
+To provide a general market summary:
+- Navigate to `https://finance.vietstock.vn/?languageid=2`.
+- Extract key indices (VN-Index, HNX-Index, UPCoM-Index).
+- Identify top gainers, losers, or most active stocks from the homepage tables.
+- Summarize the overall market sentiment based on the number of increasing vs. decreasing stocks.
+
+### 2. Specific Ticker Analysis
+When a user asks about a specific stock (e.g., "FPT", "VCB"):
+- Navigate to `https://finance.vietstock.vn/{TICKER}-{company-name}.htm?languageid=2`. 
+- *Tip*: If the exact URL is unknown, use the search bar on the homepage or search engine to find the direct ticker page.
+- **Real-time Price**: Extract current price, change percentage, and trading volume.
+- **Financial Indicators**: Collect key ratios such as P/E, EPS, P/B, Market Cap, and Dividend Yield.
+- **Financial Statements**: Look at the "Financials" section for recent Revenue and Profit after tax.
+- **News**: Check the "News & Events" section for the latest 3-5 headlines related to the ticker.
+
+### 3. Report Generation
+Structure the summarized report as follows:
+- **Executive Summary**: Brief overview of the ticker/market.
+- **Key Metrics Table**: Present price and financial indicators in a clear table.
+- **Recent News**: Bulleted list of recent headlines with dates.
+- **Conclusion/Insight**: A short summary of the stock\'s current standing.
+
+## Key Resources
+- **Primary Source**: [VietstockFinance (English)](https://finance.vietstock.vn/?languageid=2)
+- **News Section**: [Vietstock News](https://en.vietstock.vn/)
+
+## Guidelines
+- Always check the "languageid=2" parameter in URLs to ensure the English version is used.
+- For financial indicators, prioritize the most recent data (e.g., latest quarter or trailing 12 months).
+- When summarizing news, focus on events that impact stock price (earnings reports, dividend announcements, major contracts).
+
